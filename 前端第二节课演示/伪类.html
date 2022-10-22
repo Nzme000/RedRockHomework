@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>伪类</title>
+        <style>
+            div,
+            li,
+            p {
+                border: 1px black solid;
+                margin: 30px;
+                padding: 10px;
+            }
+
+            /* [href] {
+                color: red;
+            } */
+
+            /* 匹配father类下面的所有li标签 */
+            /* .father li {
+                color: red;
+            } */
+
+            /* 只匹配father类下的第一层li标签 */
+            /* .father > li {
+                color: red;
+            } */
+
+            /* 只匹配p标签下面的第一个li标签 */
+            /* p + li {
+                color: red;
+            } */
+
+            /* button:hover {
+                color: red;
+            } */
+            
+            /* .father::after {
+                content: "我是一个伪元素";
+                width: 5px;
+                height: 1px;
+                background-color: green;
+            } */
+        </style>
+    </head>
+    <body>
+        <a href="#">我是a标签,我具有herf属性</a>
+        <div class="father">
+            我是父元素
+            <li>我是li,是第一个子元素</li>
+            <p>我是p,是第二个子元素</p>
+            <li>我是li,是第三个子元素</li>
+            <li>我是li,是第四个子元素</li>
+            <div class="son">
+                我是div,是第五个子元素
+                <li>我是li,是第六个子元素,也可以叫我"孙"元素</li>
+            </div>
+        </div>
+        <button>鼠标放在我上面时我会变成红色</button>
+    </body>
+</html>
